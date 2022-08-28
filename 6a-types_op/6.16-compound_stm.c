@@ -43,12 +43,12 @@ void    cpst_and_macros(void)
 	In GNU C, if you know the type of the operands (here let’s assume int), you
 	can define the macro safely as in line 48-49.
 	*/
-	#define maxv1(a,b) ((a) > (b) ? (a) : (b)) // Nothing wrong here officer 👌 
-	#define maxv2(a,b) ({ int _a = a, _b = b; \
+	#define MAXV1(a,b) ((a) > (b) ? (a) : (b)) // Nothing wrong here officer 👌 
+	#define MAXV2(a,b) ({ int _a = a, _b = b; \
 	 					_a > _b ? _a : _b; })
 
-	printf("maxv1(23, 16): %i\n", maxv1((0xB + 0xC), (int)(4.1 * 4.1)));
-	printf("maxv2(23, 16): %i\n", maxv2((0xB + 0xC), (int)(4.1 * 4.1)));
+	printf("maxv1(23, 16): %i\n", MAXV1((0xB + 0xC), (int)(4.1 * 4.1)));
+	printf("maxv2(23, 16): %i\n", MAXV2((0xB + 0xC), (int)(4.1 * 4.1)));
 }
 
 int    main(void)

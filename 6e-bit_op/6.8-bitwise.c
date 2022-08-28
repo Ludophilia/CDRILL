@@ -33,7 +33,7 @@ void    exclusive_disjuction(void)
 	printf("1100 ^ 1011 = 0x%x = 0111\n", 0b1100 ^ 0b1011);
 }
 
-void    negation(void)
+void    complement(void)
 {
 	/* Bitwise negation reverses each bit in its operand */
 	printf("~0xffffffff = 0x%x = 00000000\n", ~0xffffffff); /* On 32 bits at 
